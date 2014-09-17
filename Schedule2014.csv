@@ -1,20 +1,20 @@
-9/18/14;09:20;09:50;TBA;Mike Ash
-9/18/14;10:00;10:30;What to do when you get hacked?;Andrew Yates
-9/18/14;11:05;11:35;Autolayouts for everyone;Krzysztof Kucharewics
-9/18/14;11:45;12:15;Can't handle my scale;Michele Titolo
-9/18/14;12:25;13:00;Programming Humans Through Humor;Andrew Tarvin
-9/18/14;15:00;15:30;Future of Functional Programming on iOS;Ash Furrow
-9/18/14;15:40;16:10;Users don't bite;getting started with user testing;Maxim Cramer
-9/18/14;16:30;17:00;Unit Testing;Jon Reid
-9/18/14;17:10;17:40;Advanced CocoaPods;Eloy Duran
-9/18/14;17:50;18:20;Practical Marketing on the App Store;Dave Verwer
-9/19/14;09:20;09:50;A Brief, Incomplete, and Mostly Wrong History of Databases on iOS;Jean-Pierre Simard
-9/19/14;10:00;10:30;To drawRect or not to drawRect: an overview of graphics on iOS;Sam Davies
-9/19/14;11:05;11:35;UIKit and Clean Code;Jordi Pellat
-9/19/14;11:45;12:15;Scenekit;David Rönnqvist
-9/19/14;12:25;13:00;Lightning Talks;Multiple
-9/19/14;15:00;15:30;The Viber iOS client under the hood;Cyril Lashkevich
-9/19/14;15:40;16:10;Be the quality you want to see: code quality metrics;Simone Civetta
-9/19/14;16:30;17:00;TBA;Kyle Fuller
-9/19/14;17:10;17:40;TBA;Sam Soffes
-9/19/14;17:50;18:20;TBA;Graham Lee
+18.9.14;09:20;09:50;Swift and C;Mike Ash
+18.9.14;10:00;10:30;What to do when you get hacked?;Andrew Yates
+18.9.14;11:05;11:35;Autolayouts for everyone;Krzysztof Kucharewics
+18.9.14;11:45;12:15;Can't handle my scale;Michele Titolo
+18.9.14;12:25;13:00;Programming Humans Through Humor;Andrew Tarvin
+18.9.14;15:00;15:30;Future of Functional Programming on iOS;Ash Furrow
+18.9.14;15:40;16:10;Users don't bite;getting started with user testing;Maxim Cramer
+18.9.14;16:30;17:00;Unit Testing;Jon Reid
+18.9.14;17:10;17:40;Advanced CocoaPods;Eloy Duran
+18.9.14;17:50;18:20;Practical Marketing on the App Store;Dave Verwer
+19.9.14;09:20;09:50;A Brief, Incomplete, and Mostly Wrong History of Databases on iOS;Jean-Pierre Simard
+19.9.14;10:00;10:30;To drawRect or not to drawRect: an overview of graphics on iOS;Sam Davies
+19.9.14;11:05;11:35;UIKit and Clean Code;Jordi Pellat
+19.9.14;11:45;12:15;Scenekit;David Rönnqvist
+19.9.14;12:25;13:00;Lightning Talks;Multiple
+19.9.14;15:00;15:30;The Viber iOS client under the hood;Cyril Lashkevich
+19.9.14;15:40;16:10;Be the quality you want to see: code quality metrics;Simone Civetta
+19.9.14;16:30;17:00;Building for Open Source;Kyle Fuller
+19.9.14;17:10;17:40;Go Build;Sam Soffes
+19.9.14;17:50;18:20;Testing iOS apps from one end to the other;Graham Lee
