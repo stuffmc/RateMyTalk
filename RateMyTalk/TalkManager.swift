@@ -31,10 +31,14 @@ class TalkManager {
         for session in sessions {
             let attributes = session.componentsSeparatedByString(";")
             let talkRecord = CKRecord(recordType: talks)
-            let begin = dateFormatter.dateFromString("\(attributes[0]) \(attributes[1])")
-            let end = dateFormatter.dateFromString("\(attributes[0]) \(attributes[2])")
+            let beginString = attributes[1] as String
+            let begin = dateFormatter.dateFromString("\(attributes[0]) \(beginString)")
+            let endString = attributes[2] as String
+            let end = dateFormatter.dateFromString("\(attributes[0]) \(endString)")
             
+            talkRecord.setValue(beginString, forKey: "beginString")
             talkRecord.setValue(begin, forKey: "begin")
+            talkRecord.setValue(endString, forKey: "endString")
             talkRecord.setValue(end, forKey: "end")
             
             talkRecord.setValue(attributes[3], forKey: "name")
