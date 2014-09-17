@@ -18,15 +18,15 @@ class TalkManager {
     
     init() {
         self.registerLister()
-        fetchAllTalks { (talks) -> Void in
-            if let talk = talks.first {
-                talk.averageRating(inDatabase: self.publicDB, finishCallback: { (average) -> Void in
-                    println(average)
-                    println()
-                })
-//                self.addRating(talk, rating: 5)
-            }
-        }
+//        fetchAllTalks { (talks) -> Void in
+//            if let talk = talks.first {
+//                talk.averageRating(inDatabase: self.publicDB, finishCallback: { (average) -> Void in
+//                    println(average)
+//                    println()
+//                })
+////                self.addRating(talk, rating: 5)
+//            }
+//        }
     }
     
     func importTalks() {
@@ -116,7 +116,7 @@ class TalkManager {
         
         subscription.notificationInfo = notificationInfo;
         
-        self.publicDB .saveSubscription(subscription, completionHandler: { (subscription, error) -> Void in
+        self.publicDB.saveSubscription(subscription, completionHandler: { (subscription, error) -> Void in
             println(error)
         })
     }

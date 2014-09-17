@@ -99,8 +99,7 @@ class Talk: NSObject {
             var sum: Float = 0
             if records.count > 0 {
                 for record in records {
-                    //                let rating = NSNumber(record.objectForKey("rating"))
-                    //                sum += Int()
+                    sum += record.objectForKey("rating") as Float
                 }
                 sum = sum/Float(records.count)
             }
