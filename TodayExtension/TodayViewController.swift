@@ -6,16 +6,24 @@
 //  Copyright (c) 2014 Manuel "StuFF mc" Carrasco Molina. All rights reserved.
 //
 
+
 import UIKit
 import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
+    @IBOutlet weak var ratingView: JBRatingView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.preferredContentSize = CGSizeMake(320, 140)
         
-        self.preferredContentSize = CGSizeMake(320, 150)
+        self.ratingView.ratingChangObserverBlock { (rating: CGFloat) -> Void in
+            if (rating != 0.0) {
+                self.ratingView.userInteractionEnabled = false
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
