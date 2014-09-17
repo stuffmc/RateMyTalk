@@ -74,6 +74,7 @@ class TalkListVC: UICollectionViewController, UICollectionViewDataSource {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "h:mm a" // superset of OP's format
         cell.lblTime?.text = dateFormatter.stringFromDate(talk.begin)
+        
         return cell
     }
 }

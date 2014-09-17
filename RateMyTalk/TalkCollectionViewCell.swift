@@ -13,6 +13,7 @@ class TalkCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var lblTopic: UILabel!
     @IBOutlet weak var lblSpeaker: UILabel!
+    @IBOutlet weak var ratingView: JBRatingView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
