@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08055E9D19C9D6FD008A9FE0 /* TalkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08055E9C19C9D6FD008A9FE0 /* TalkCollectionViewCell.swift */; };
+		10BDCA7319C9F31400D1DBCA /* TalkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC7719C98E5700A4FE0E /* TalkManager.swift */; };
 		43F2FD6119C9D93900CB9B8C /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F2FD6019C9D93900CB9B8C /* Talk.swift */; };
 		43F2FD6219C9D93900CB9B8C /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F2FD6019C9D93900CB9B8C /* Talk.swift */; };
 		4C23DC5619C98C6900A4FE0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC5519C98C6900A4FE0E /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 		4C23DC8919C9929300A4FE0E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C23DC8819C9929300A4FE0E /* MainInterface.storyboard */; };
 		4C23DC8C19C9929300A4FE0E /* Rate My Talk.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4C23DC7F19C9929300A4FE0E /* Rate My Talk.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4C23DC9519C99C8F00A4FE0E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C23DC9419C99C8F00A4FE0E /* CloudKit.framework */; };
+		4C23DC9A19C9EFD900A4FE0E /* Schedule2014.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4C23DC9919C9EFD900A4FE0E /* Schedule2014.csv */; };
 		74BA2E1B19C9DC8300158334 /* JBRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BA2E1A19C9DC8300158334 /* JBRatingView.m */; };
 		74BA2E1C19C9DC8300158334 /* JBRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BA2E1A19C9DC8300158334 /* JBRatingView.m */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,7 @@
 		4C23DC8819C9929300A4FE0E /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		4C23DC9319C99C8200A4FE0E /* RateMyTalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RateMyTalk.entitlements; sourceTree = "<group>"; };
 		4C23DC9419C99C8F00A4FE0E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		4C23DC9919C9EFD900A4FE0E /* Schedule2014.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Schedule2014.csv; sourceTree = SOURCE_ROOT; };
 		74BA2E1719C9DC8200158334 /* RateMyTalk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RateMyTalk-Bridging-Header.h"; sourceTree = "<group>"; };
 		74BA2E1819C9DC8300158334 /* TodayExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TodayExtension-Bridging-Header.h"; sourceTree = "<group>"; };
 		74BA2E1919C9DC8300158334 /* JBRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBRatingView.h; sourceTree = "<group>"; };
@@ -144,6 +147,7 @@
 		4C23DC5219C98C6900A4FE0E /* RateMyTalk */ = {
 			isa = PBXGroup;
 			children = (
+				4C23DC9919C9EFD900A4FE0E /* Schedule2014.csv */,
 				74BA2E1D19C9DE6C00158334 /* ThirdPartyCode */,
 				4C23DC9319C99C8200A4FE0E /* RateMyTalk.entitlements */,
 				4C23DC5519C98C6900A4FE0E /* AppDelegate.swift */,
@@ -334,6 +338,7 @@
 			files = (
 				4C23DC5B19C98C6900A4FE0E /* Main.storyboard in Resources */,
 				4C23DC5D19C98C6900A4FE0E /* Images.xcassets in Resources */,
+				4C23DC9A19C9EFD900A4FE0E /* Schedule2014.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +390,7 @@
 				4C23DC8719C9929300A4FE0E /* TodayViewController.swift in Sources */,
 				43F2FD6219C9D93900CB9B8C /* Talk.swift in Sources */,
 				74BA2E1C19C9DC8300158334 /* JBRatingView.m in Sources */,
+				10BDCA7319C9F31400D1DBCA /* TalkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +516,7 @@
 				INFOPLIST_FILE = RateMyTalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2bc9b268-7a9f-4b72-bf2c-dd632cfa946c";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RateMyTalk/RateMyTalk-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -527,7 +533,7 @@
 				INFOPLIST_FILE = RateMyTalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2bc9b268-7a9f-4b72-bf2c-dd632cfa946c";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RateMyTalk/RateMyTalk-Bridging-Header.h";
 			};
 			name = Release;
