@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10FEF66519C9CFC9000B4581 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 10FEF66419C9CFC9000B4581 /* star.png */; };
+		10FEF66619C9CFC9000B4581 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 10FEF66419C9CFC9000B4581 /* star.png */; };
 		4C23DC5619C98C6900A4FE0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC5519C98C6900A4FE0E /* AppDelegate.swift */; };
 		4C23DC5819C98C6900A4FE0E /* TalkListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC5719C98C6900A4FE0E /* TalkListVC.swift */; };
 		4C23DC5B19C98C6900A4FE0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C23DC5919C98C6900A4FE0E /* Main.storyboard */; };
@@ -61,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		10FEF66419C9CFC9000B4581 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = ../../../Desktop/star.png; sourceTree = "<group>"; };
 		4C23DC5019C98C6900A4FE0E /* RateMyTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RateMyTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C23DC5419C98C6900A4FE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C23DC5519C98C6900A4FE0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10FEF66319C9CFAA000B4581 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				10FEF66419C9CFC9000B4581 /* star.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		4C23DC4719C98C6900A4FE0E = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +145,7 @@
 		4C23DC5219C98C6900A4FE0E /* RateMyTalk */ = {
 			isa = PBXGroup;
 			children = (
+				10FEF66319C9CFAA000B4581 /* Resources */,
 				4C23DC9319C99C8200A4FE0E /* RateMyTalk.entitlements */,
 				4C23DC5519C98C6900A4FE0E /* AppDelegate.swift */,
 				4C23DC7719C98E5700A4FE0E /* TalkManager.swift */,
@@ -267,7 +279,7 @@
 				TargetAttributes = {
 					4C23DC4F19C98C6900A4FE0E = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = TS7K5XE329;
+						DevelopmentTeam = Y4R8N4N5G7;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 1;
@@ -309,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C23DC5B19C98C6900A4FE0E /* Main.storyboard in Resources */,
+				10FEF66519C9CFC9000B4581 /* star.png in Resources */,
 				4C23DC5D19C98C6900A4FE0E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10FEF66619C9CFC9000B4581 /* star.png in Resources */,
 				4C23DC8919C9929300A4FE0E /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,7 +15,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         super.viewDidLoad()
         
         
-        self.preferredContentSize = CGSizeMake(320, 100)
+        self.preferredContentSize = CGSizeMake(320, 150)
     }
     
     override func didReceiveMemoryWarning() {
