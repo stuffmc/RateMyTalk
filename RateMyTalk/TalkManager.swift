@@ -19,7 +19,11 @@ class TalkManager {
     init() {
         fetchAllTalks { (talks) -> Void in
             if let talk = talks.first {
-                self.addRating(talk, rating: 5)
+                talk.averageRating(inDatabase: self.publicDB, finishCallback: { (average) -> Void in
+                    println(average)
+                    println()
+                })
+//                self.addRating(talk, rating: 5)
             }
         }
     }
