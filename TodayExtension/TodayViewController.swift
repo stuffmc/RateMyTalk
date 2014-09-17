@@ -11,7 +11,9 @@ import UIKit
 import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-    
+    @IBOutlet weak var lblSpeaker: UILabel!
+    @IBOutlet weak var lblTopic: UILabel!
+    @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var ratingView: JBRatingView!
     
     override func viewDidLoad() {
@@ -26,9 +28,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             }
         }
         
-        TalkManager().fetchAllTalks { (allTalks) -> Void in
-            let aTalks = allTalks
-        }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDefaultsDidChange", name: NSUserDefaultsDidChangeNotification, object: nil)
+        
+    }
+    
+    func userDefaultsDidChange(notification: NSNotification) {
+        let userDefaults = NSUserDefaults(suiteName: "group.biz.pomcast.RateMyTalk")
+        
+        updateCurrentTalkUI(userDefaults.objectForKey("currentTalk") as Talk)
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,4 +53,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         completionHandler(NCUpdateResult.NewData)
     }
     
+    func updateCurrentTalkUI(talk: Talk) {
+        lblTopic.text = talk.name
+    }
 }

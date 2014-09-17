@@ -16,6 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         println("Started...")
         TalkManager().fetchAllTalks { (allTalks) -> Void in
+            
+            let currentTalk = allTalks.filter{
+                NSDate.date().compare(($0 as Talk).begin) == NSComparisonResult.OrderedAscending &&
+                NSDate.date().compare(($0 as Talk).end) == NSComparisonResult.OrderedDescending
+            }.first
+            
+            let userDefaults = NSUserDefaults(suiteName: "group.biz.pomcast.RateMyTalk")
+            userDefaults.setObject(currentTalk, forKey: "currentTalk")
+            userDefaults.synchronize()
+            
             for talk in allTalks {
                 println("=========================")
                 println("Name:" + talk.name)

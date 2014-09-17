@@ -50,6 +50,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="140"/>
                     <connections>
+                        <outlet property="lblSpeaker" destination="j67-Ht-fU3" id="HXL-6v-MXY"/>
+                        <outlet property="lblTime" destination="5LL-lQ-9B8" id="hZZ-w4-OSb"/>
+                        <outlet property="lblTopic" destination="lvY-91-v4E" id="TiW-6E-Uvb"/>
                         <outlet property="ratingView" destination="Aej-Z5-FSz" id="EtG-TF-5aL"/>
                     </connections>
                 </viewController>
