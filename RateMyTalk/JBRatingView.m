@@ -28,9 +28,6 @@
         self.mainBackgroundColor = [UIColor whiteColor];
     }
     
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
-    [self addGestureRecognizer:panGesture];
-    
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
     [self addGestureRecognizer:tapGesture];
 }
@@ -109,27 +106,15 @@
         x -= 2;
     }
     
-    if (x < 8.6) {
-        return 0.0;
-    } else if (x >= 8.6 && x < 25.8) {
-        return 0.5;
-    } else if (x >= 25.8 && x < 43.0) {
+    if (x < 43.0) {
         return 1.0;
-    } else if (x >= 43.0 && x < 60.2) {
-        return 1.5;
-    } else if (x >= 60.2 && x < 77.4) {
+    } else if (x >= 43.0 && x < 77.4) {
         return 2.0;
-    } else if (x >= 77.4 && x < 94.6) {
-        return 2.5;
-    } else if (x >= 94.6 && x < 111.8) {
+    } else if (x >= 77.4 && x < 111.8) {
         return 3.0;
-    } else if (x >= 111.8 && x < 129.0) {
-        return 3.5;
-    } else if (x >= 129.0 && x < 146.2) {
+    } else if (x >= 111.8 && x < 146.2) {
         return 4.0;
-    } else if (x >= 146.2 && x < 163.4) {
-        return 4.5;
-    } else if (x >= 163.4) {
+    } else if (x >= 146.2) {
         return 5.0;
     }
     return 0.0;

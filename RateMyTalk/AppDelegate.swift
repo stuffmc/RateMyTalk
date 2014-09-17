@@ -15,7 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         println("Started...")
-        TalkManager()
+        TalkManager().fetchAllTalks { (allTalks) -> Void in
+            for talk in allTalks {
+                println("=========================")
+                println("Name:" + talk.name)
+                println("Speaker:" + (talk as Talk).speaker)
+                println((talk as Talk).begin)
+                println((talk as Talk).end)
+                println("=========================")
+            }
+        }
         return true
     }
 
