@@ -14,6 +14,7 @@ class TalkManager {
     let publicDB = CKContainer.defaultContainer().publicCloudDatabase
 //    let privateDB = CKContainer.defaultContainer().privateCloudDatabase
     let allQuery = CKQuery(recordType: "Talks", predicate: NSPredicate(value: true))
+    var allTalks: NSArray?
     
     init() {
     }
@@ -65,4 +66,23 @@ class TalkManager {
         }
     }
 
+    func fetchAllTalks(finishCallback: (NSArray) -> Void) {
+        let predicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: talks, predicate: predicate)
+        publicDB.performQuery(query, inZoneWithID: nil) { (records, error) -> Void in
+            var mutableArray = NSMutableArray()
+            for record in records {
+                var talk: Talk = Talk(record: record as CKRecord)
+                mutableArray.addObject(talk)
+            }
+            self.allTalks = NSArray(array: mutableArray)
+            finishCallback(self.allTalks!)
+        }
+    }
+
+    func saveTalk(talk: Talk) {
+        self.publicDB.saveRecord(talk.record, completionHandler: { (savedTalk, error) -> Void in
+            println(error)
+        })
+    }
 }
