@@ -14,7 +14,9 @@ class Talk: NSObject {
     let recordType = "Talk"
     let nameKey = "name"
     let beginKey = "begin"
+    let beginStringKey = "beginString"
     let endKey = "end"
+    let endStringKey = "endString"
     let speakerKey = "speaker"
     
     var record: CKRecord
@@ -38,7 +40,17 @@ class Talk: NSObject {
             self.record.setObject(newValue, forKey: self.beginKey)
         }
     }
-
+    
+    var beginString: NSDate {
+        get {
+            return self.record.objectForKey(self.beginStringKey) as NSDate
+        }
+        
+        set {
+            self.record.setObject(newValue, forKey: self.beginStringKey)
+        }
+    }
+    
     var end: NSDate {
         get {
             return self.record.objectForKey(self.endKey) as NSDate
@@ -46,6 +58,16 @@ class Talk: NSObject {
         
         set {
             self.record.setObject(newValue, forKey: self.endKey)
+        }
+    }
+
+    var endString: NSDate {
+        get {
+            return self.record.objectForKey(self.endStringKey) as NSDate
+        }
+        
+        set {
+            self.record.setObject(newValue, forKey: self.endStringKey)
         }
     }
     
@@ -57,6 +79,14 @@ class Talk: NSObject {
         set {
             self.record.setObject(newValue, forKey: self.speakerKey)
         }
+    }
+    
+    func addRating (Int) {
+        
+    }
+    
+    func averageRating() -> Double {
+        return 0
     }
 
     // Create from an existing CKRecord
