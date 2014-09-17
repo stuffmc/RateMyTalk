@@ -81,10 +81,12 @@ class Talk: NSObject {
         }
     }
     
-    func addRating (rating: Int, inDatabase: CKDatabase!) {
-        let talkRecord = CKRecord(recordType: "Ratings")
-        talkRecord.setValue(rating, forKey: "rating")
-        inDatabase.saveRecord(talkRecord, completionHandler: { (savedTalk, error) -> Void in
+    func addRating (rating: Int, inDatabase database: CKDatabase!) {
+        let ratingRecord = CKRecord(recordType: "Ratings")
+        ratingRecord.setValue(rating, forKey: "rating")
+        let talkReference = CKReference(record: record, action: CKReferenceAction.None)
+        ratingRecord.setValue(talkReference, forKey: "talk")
+        database.saveRecord(ratingRecord, completionHandler: { (savedTalk, error) -> Void in
             println(savedTalk)
             println(error)
         })

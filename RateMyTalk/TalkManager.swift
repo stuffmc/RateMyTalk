@@ -14,9 +14,14 @@ class TalkManager {
     let publicDB = CKContainer.defaultContainer().publicCloudDatabase
 //    let privateDB = CKContainer.defaultContainer().privateCloudDatabase
     let allQuery = CKQuery(recordType: "Talks", predicate: NSPredicate(value: true))
-    var allTalks: NSArray?
+    var allTalks: Array<Talk>?
     
     init() {
+        fetchAllTalks { (talks) -> Void in
+            if let talk = talks.first {
+                self.addRating(talk, rating: 5)
+            }
+        }
     }
     
     func importTalks() {
@@ -70,16 +75,15 @@ class TalkManager {
         }
     }
 
-    func fetchAllTalks(finishCallback: (NSArray) -> Void) {
+    func fetchAllTalks(finishCallback: (Array<Talk>) -> Void) {
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: talks, predicate: predicate)
         publicDB.performQuery(query, inZoneWithID: nil) { (records, error) -> Void in
-            var mutableArray = NSMutableArray()
+            self.allTalks = Array<Talk>()
             for record in records {
-                var talk: Talk = Talk(record: record as CKRecord)
-                mutableArray.addObject(talk)
+                let talk = Talk(record: record as CKRecord)
+                self.allTalks?.append(talk)
             }
-            self.allTalks = NSArray(array: mutableArray)
             finishCallback(self.allTalks!)
         }
     }
