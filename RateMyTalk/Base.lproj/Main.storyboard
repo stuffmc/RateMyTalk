@@ -19,11 +19,10 @@
                             <size key="footerReferenceSize" width="320" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <view key="backgroundView" contentMode="scaleToFill" id="7Ea-ld-7Q5">
+                        <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="MI8-nQ-Obe">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
+                        </activityIndicatorView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TalkCell" id="F2B-i1-MHs" userLabel="TalkCell" customClass="TalkCollectionViewCell" customModule="RateMyTalk" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -128,7 +127,6 @@
                             </constraints>
                         </collectionReusableView>
                         <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FooterView" id="VH4-6t-r8F">
-                            <rect key="frame" x="0.0" y="200" width="600" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </collectionReusableView>
                         <connections>
@@ -136,6 +134,9 @@
                             <outlet property="delegate" destination="ih0-QJ-06g" id="W2Y-IP-yzp"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <outlet property="spinner" destination="MI8-nQ-Obe" id="ScT-QL-7Ee"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cC6-82-A9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

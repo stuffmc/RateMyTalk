@@ -76,7 +76,9 @@ class TalkManager {
                 mutableArray.addObject(talk)
             }
             self.allTalks = NSArray(array: mutableArray)
-            finishCallback(self.allTalks!)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                finishCallback(self.allTalks!)
+            })
         }
     }
 
