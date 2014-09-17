@@ -9,8 +9,22 @@
 import UIKit
 
 class TalkListVC: UICollectionViewController, UICollectionViewDataSource {
+    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    var talks: NSArray?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        TalkManager().fetchAllTalks { (allTalks) -> Void in
+            self.spinner.stopAnimating()
+            self.talks = allTalks
+            self.collectionView?.reloadData()
+        }
     }
     
 //    override func collectionView(collectionView: UICollectionView,
@@ -28,15 +42,26 @@ class TalkListVC: UICollectionViewController, UICollectionViewDataSource {
     
     // UICollectionViewDataSource
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        if let array = self.talks {
+            return array.count
+        }
+        return 0;
     }
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-         return 2
+        return 1;
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("TalkCell", forIndexPath: indexPath) as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("TalkCell", forIndexPath: indexPath) as TalkCollectionViewCell
+        var talk:Talk = self.talks?.objectAtIndex(indexPath.row) as Talk
+        
+        cell.lblSpeaker?.text = talk.speaker
+        cell.lblTopic?.text = talk.name
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "h:mm a" // superset of OP's format
+        cell.lblTime?.text = dateFormatter.stringFromDate(talk.begin)
         return cell
     }
 }

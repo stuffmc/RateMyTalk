@@ -84,7 +84,9 @@ class TalkManager {
                 let talk = Talk(record: record as CKRecord)
                 self.allTalks?.append(talk)
             }
-            finishCallback(self.allTalks!)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                finishCallback(self.allTalks!)
+            })
         }
     }
 
