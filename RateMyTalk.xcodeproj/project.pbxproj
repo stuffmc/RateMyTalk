@@ -506,7 +506,7 @@
 				INFOPLIST_FILE = RateMyTalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2bc9b268-7a9f-4b72-bf2c-dd632cfa946c";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RateMyTalk/RateMyTalk-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -523,7 +523,7 @@
 				INFOPLIST_FILE = RateMyTalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2bc9b268-7a9f-4b72-bf2c-dd632cfa946c";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RateMyTalk/RateMyTalk-Bridging-Header.h";
 			};
 			name = Release;
