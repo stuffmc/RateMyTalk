@@ -18,15 +18,15 @@ class TalkManager {
     
     init() {
         self.registerLister()
-//        fetchAllTalks { (talks) -> Void in
-//            if let talk = talks.first {
-//                talk.averageRating(inDatabase: self.publicDB, finishCallback: { (average) -> Void in
-//                    println(average)
-//                    println()
-//                })
+        fetchAllTalks { (talks) -> Void in
+            if let talk = talks.first {
+                self.averageRating(talk, finishCallback: { (average) -> Void in
+                    println(average)
+                    println()
+                })
 ////                self.addRating(talk, rating: 5)
-//            }
-//        }
+            }
+        }
     }
     
     func importTalks() {
@@ -105,6 +105,12 @@ class TalkManager {
     func addRating (talk: Talk, rating: Int) {
         // TODO: Send back a feedback that it worked. For now, we trust it!x    
         talk.addRating(rating, inDatabase: publicDB)
+    }
+    
+    func averageRating(talk: Talk, finishCallback: (Float) -> Void) {
+        talk.averageRating(inDatabase: publicDB) { (average) -> Void in
+            finishCallback(average)
+        }
     }
     
     func registerLister() {
