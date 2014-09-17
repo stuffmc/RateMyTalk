@@ -15,6 +15,10 @@
 		4C23DC7619C98DB200A4FE0E /* RateTalkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC7519C98DB200A4FE0E /* RateTalkVC.swift */; };
 		4C23DC7819C98E5700A4FE0E /* TalkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC7719C98E5700A4FE0E /* TalkManager.swift */; };
 		4C23DC7A19C98FE000A4FE0E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC7919C98FE000A4FE0E /* README.md */; };
+		4C23DC8219C9929300A4FE0E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C23DC8119C9929300A4FE0E /* NotificationCenter.framework */; };
+		4C23DC8719C9929300A4FE0E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC8619C9929300A4FE0E /* TodayViewController.swift */; };
+		4C23DC8919C9929300A4FE0E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C23DC8819C9929300A4FE0E /* MainInterface.storyboard */; };
+		4C23DC8C19C9929300A4FE0E /* Rate My Talk.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4C23DC7F19C9929300A4FE0E /* Rate My Talk.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +29,35 @@
 			remoteGlobalIDString = 4C23DC4F19C98C6900A4FE0E;
 			remoteInfo = RateMyTalk;
 		};
+		4C23DC8A19C9929300A4FE0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C23DC4819C98C6900A4FE0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C23DC7E19C9929300A4FE0E;
+			remoteInfo = TodayExtension;
+		};
+		4C23DC8D19C9929300A4FE0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C23DC4819C98C6900A4FE0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C23DC7E19C9929300A4FE0E;
+			remoteInfo = TodayExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C23DC9219C9929300A4FE0E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4C23DC8C19C9929300A4FE0E /* Rate My Talk.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4C23DC5019C98C6900A4FE0E /* RateMyTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RateMyTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +72,11 @@
 		4C23DC7519C98DB200A4FE0E /* RateTalkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateTalkVC.swift; sourceTree = "<group>"; };
 		4C23DC7719C98E5700A4FE0E /* TalkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkManager.swift; sourceTree = "<group>"; };
 		4C23DC7919C98FE000A4FE0E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4C23DC7F19C9929300A4FE0E /* Rate My Talk.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Rate My Talk.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C23DC8119C9929300A4FE0E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		4C23DC8519C9929300A4FE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C23DC8619C9929300A4FE0E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		4C23DC8819C9929300A4FE0E /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +94,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4C23DC7C19C9929300A4FE0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C23DC8219C9929300A4FE0E /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,6 +111,8 @@
 				4C23DC7919C98FE000A4FE0E /* README.md */,
 				4C23DC5219C98C6900A4FE0E /* RateMyTalk */,
 				4C23DC6819C98C6A00A4FE0E /* RateMyTalkTests */,
+				4C23DC8319C9929300A4FE0E /* TodayExtension */,
+				4C23DC8019C9929300A4FE0E /* Frameworks */,
 				4C23DC5119C98C6900A4FE0E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +122,7 @@
 			children = (
 				4C23DC5019C98C6900A4FE0E /* RateMyTalk.app */,
 				4C23DC6519C98C6900A4FE0E /* RateMyTalkTests.xctest */,
+				4C23DC7F19C9929300A4FE0E /* Rate My Talk.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +166,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4C23DC8019C9929300A4FE0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C23DC8119C9929300A4FE0E /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C23DC8319C9929300A4FE0E /* TodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4C23DC8619C9929300A4FE0E /* TodayViewController.swift */,
+				4C23DC8819C9929300A4FE0E /* MainInterface.storyboard */,
+				4C23DC8419C9929300A4FE0E /* Supporting Files */,
+			);
+			path = TodayExtension;
+			sourceTree = "<group>";
+		};
+		4C23DC8419C9929300A4FE0E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C23DC8519C9929300A4FE0E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,10 +202,13 @@
 				4C23DC4C19C98C6900A4FE0E /* Sources */,
 				4C23DC4D19C98C6900A4FE0E /* Frameworks */,
 				4C23DC4E19C98C6900A4FE0E /* Resources */,
+				4C23DC9219C9929300A4FE0E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4C23DC8B19C9929300A4FE0E /* PBXTargetDependency */,
+				4C23DC8E19C9929300A4FE0E /* PBXTargetDependency */,
 			);
 			name = RateMyTalk;
 			productName = RateMyTalk;
@@ -156,6 +233,23 @@
 			productReference = 4C23DC6519C98C6900A4FE0E /* RateMyTalkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4C23DC7E19C9929300A4FE0E /* TodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C23DC8F19C9929300A4FE0E /* Build configuration list for PBXNativeTarget "TodayExtension" */;
+			buildPhases = (
+				4C23DC7B19C9929300A4FE0E /* Sources */,
+				4C23DC7C19C9929300A4FE0E /* Frameworks */,
+				4C23DC7D19C9929300A4FE0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayExtension;
+			productName = TodayExtension;
+			productReference = 4C23DC7F19C9929300A4FE0E /* Rate My Talk.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -171,6 +265,9 @@
 					4C23DC6419C98C6900A4FE0E = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 4C23DC4F19C98C6900A4FE0E;
+					};
+					4C23DC7E19C9929300A4FE0E = {
+						CreatedOnToolsVersion = 6.0;
 					};
 				};
 			};
@@ -189,6 +286,7 @@
 			targets = (
 				4C23DC4F19C98C6900A4FE0E /* RateMyTalk */,
 				4C23DC6419C98C6900A4FE0E /* RateMyTalkTests */,
+				4C23DC7E19C9929300A4FE0E /* TodayExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -207,6 +305,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C23DC7D19C9929300A4FE0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C23DC8919C9929300A4FE0E /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +339,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4C23DC7B19C9929300A4FE0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C23DC8719C9929300A4FE0E /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -240,6 +354,16 @@
 			isa = PBXTargetDependency;
 			target = 4C23DC4F19C98C6900A4FE0E /* RateMyTalk */;
 			targetProxy = 4C23DC6619C98C6A00A4FE0E /* PBXContainerItemProxy */;
+		};
+		4C23DC8B19C9929300A4FE0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C23DC7E19C9929300A4FE0E /* TodayExtension */;
+			targetProxy = 4C23DC8A19C9929300A4FE0E /* PBXContainerItemProxy */;
+		};
+		4C23DC8E19C9929300A4FE0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C23DC7E19C9929300A4FE0E /* TodayExtension */;
+			targetProxy = 4C23DC8D19C9929300A4FE0E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -386,6 +510,30 @@
 			};
 			name = Release;
 		};
+		4C23DC9019C9929300A4FE0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "Rate My Talk";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4C23DC9119C9929300A4FE0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "Rate My Talk";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,6 +559,14 @@
 			buildConfigurations = (
 				4C23DC7319C98C6A00A4FE0E /* Debug */,
 				4C23DC7419C98C6A00A4FE0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4C23DC8F19C9929300A4FE0E /* Build configuration list for PBXNativeTarget "TodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C23DC9019C9929300A4FE0E /* Debug */,
+				4C23DC9119C9929300A4FE0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
