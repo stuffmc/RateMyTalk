@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08055E9D19C9D6FD008A9FE0 /* TalkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08055E9C19C9D6FD008A9FE0 /* TalkCollectionViewCell.swift */; };
 		43F2FD6119C9D93900CB9B8C /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F2FD6019C9D93900CB9B8C /* Talk.swift */; };
 		43F2FD6219C9D93900CB9B8C /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F2FD6019C9D93900CB9B8C /* Talk.swift */; };
 		4C23DC5619C98C6900A4FE0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC5519C98C6900A4FE0E /* AppDelegate.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		08055E9C19C9D6FD008A9FE0 /* TalkCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkCollectionViewCell.swift; sourceTree = "<group>"; };
 		43F2FD6019C9D93900CB9B8C /* Talk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
 		4C23DC5019C98C6900A4FE0E /* RateMyTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RateMyTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C23DC5419C98C6900A4FE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				4C23DC5719C98C6900A4FE0E /* TalkListVC.swift */,
 				4C23DC7519C98DB200A4FE0E /* RateTalkVC.swift */,
 				4C23DC5919C98C6900A4FE0E /* Main.storyboard */,
+				08055E9C19C9D6FD008A9FE0 /* TalkCollectionViewCell.swift */,
 				4C23DC5C19C98C6900A4FE0E /* Images.xcassets */,
 				4C23DC5319C98C6900A4FE0E /* Supporting Files */,
 				74BA2E1719C9DC8200158334 /* RateMyTalk-Bridging-Header.h */,
@@ -358,6 +361,7 @@
 			files = (
 				4C23DC5819C98C6900A4FE0E /* TalkListVC.swift in Sources */,
 				4C23DC7619C98DB200A4FE0E /* RateTalkVC.swift in Sources */,
+				08055E9D19C9D6FD008A9FE0 /* TalkCollectionViewCell.swift in Sources */,
 				4C23DC7A19C98FE000A4FE0E /* README.md in Sources */,
 				4C23DC5619C98C6900A4FE0E /* AppDelegate.swift in Sources */,
 				4C23DC7819C98E5700A4FE0E /* TalkManager.swift in Sources */,
