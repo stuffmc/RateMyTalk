@@ -19,6 +19,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         self.preferredContentSize = CGSizeMake(320, 140)
         
+        self.ratingView.mainBackgroundColor = UIColor.greenColor()
         self.ratingView.ratingChangObserverBlock { (rating: CGFloat) -> Void in
             if (rating != 0.0) {
                 self.ratingView.userInteractionEnabled = false
