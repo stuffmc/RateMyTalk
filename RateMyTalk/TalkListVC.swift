@@ -13,18 +13,30 @@ class TalkListVC: UICollectionViewController, UICollectionViewDataSource {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     var talks: NSArray?
+    var refreshControl: UIRefreshControl?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.addTarget(self, action: "startRefresh", forControlEvents:.ValueChanged)
+        self.collectionView?.addSubview(self.refreshControl!)
+        self.collectionView?.alwaysBounceVertical = true
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        self.startRefresh()
+    }
+    
+    func startRefresh() {
+        self.spinner.startAnimating()
         TalkManager().fetchAllTalks { (allTalks) -> Void in
             self.spinner.stopAnimating()
             self.talks = allTalks
             self.collectionView?.reloadData()
+            self.refreshControl?.endRefreshing()
         }
+
     }
     
 //    override func collectionView(collectionView: UICollectionView,
