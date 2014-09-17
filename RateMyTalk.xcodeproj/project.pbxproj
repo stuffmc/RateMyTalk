@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4C23DC5619C98C6900A4FE0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC5519C98C6900A4FE0E /* AppDelegate.swift */; };
-		4C23DC5819C98C6900A4FE0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC5719C98C6900A4FE0E /* ViewController.swift */; };
+		4C23DC5819C98C6900A4FE0E /* TalkListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC5719C98C6900A4FE0E /* TalkListVC.swift */; };
 		4C23DC5B19C98C6900A4FE0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C23DC5919C98C6900A4FE0E /* Main.storyboard */; };
 		4C23DC5D19C98C6900A4FE0E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C23DC5C19C98C6900A4FE0E /* Images.xcassets */; };
-		4C23DC6019C98C6900A4FE0E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C23DC5E19C98C6900A4FE0E /* LaunchScreen.xib */; };
 		4C23DC6C19C98C6A00A4FE0E /* RateMyTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC6B19C98C6A00A4FE0E /* RateMyTalkTests.swift */; };
+		4C23DC7619C98DB200A4FE0E /* RateTalkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC7519C98DB200A4FE0E /* RateTalkVC.swift */; };
+		4C23DC7819C98E5700A4FE0E /* TalkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC7719C98E5700A4FE0E /* TalkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		4C23DC5019C98C6900A4FE0E /* RateMyTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RateMyTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C23DC5419C98C6900A4FE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C23DC5519C98C6900A4FE0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C23DC5719C98C6900A4FE0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C23DC5719C98C6900A4FE0E /* TalkListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkListVC.swift; sourceTree = "<group>"; };
 		4C23DC5A19C98C6900A4FE0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C23DC5C19C98C6900A4FE0E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4C23DC5F19C98C6900A4FE0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4C23DC6519C98C6900A4FE0E /* RateMyTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RateMyTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C23DC6A19C98C6A00A4FE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C23DC6B19C98C6A00A4FE0E /* RateMyTalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateMyTalkTests.swift; sourceTree = "<group>"; };
+		4C23DC7519C98DB200A4FE0E /* RateTalkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateTalkVC.swift; sourceTree = "<group>"; };
+		4C23DC7719C98E5700A4FE0E /* TalkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +80,11 @@
 			isa = PBXGroup;
 			children = (
 				4C23DC5519C98C6900A4FE0E /* AppDelegate.swift */,
-				4C23DC5719C98C6900A4FE0E /* ViewController.swift */,
+				4C23DC7719C98E5700A4FE0E /* TalkManager.swift */,
+				4C23DC5719C98C6900A4FE0E /* TalkListVC.swift */,
+				4C23DC7519C98DB200A4FE0E /* RateTalkVC.swift */,
 				4C23DC5919C98C6900A4FE0E /* Main.storyboard */,
 				4C23DC5C19C98C6900A4FE0E /* Images.xcassets */,
-				4C23DC5E19C98C6900A4FE0E /* LaunchScreen.xib */,
 				4C23DC5319C98C6900A4FE0E /* Supporting Files */,
 			);
 			path = RateMyTalk;
@@ -193,7 +196,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C23DC5B19C98C6900A4FE0E /* Main.storyboard in Resources */,
-				4C23DC6019C98C6900A4FE0E /* LaunchScreen.xib in Resources */,
 				4C23DC5D19C98C6900A4FE0E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,8 +214,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C23DC5819C98C6900A4FE0E /* ViewController.swift in Sources */,
+				4C23DC5819C98C6900A4FE0E /* TalkListVC.swift in Sources */,
+				4C23DC7619C98DB200A4FE0E /* RateTalkVC.swift in Sources */,
 				4C23DC5619C98C6900A4FE0E /* AppDelegate.swift in Sources */,
+				4C23DC7819C98E5700A4FE0E /* TalkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,14 +246,6 @@
 				4C23DC5A19C98C6900A4FE0E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4C23DC5E19C98C6900A4FE0E /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C23DC5F19C98C6900A4FE0E /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
