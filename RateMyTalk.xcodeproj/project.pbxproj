@@ -22,6 +22,7 @@
 		4C23DC8919C9929300A4FE0E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C23DC8819C9929300A4FE0E /* MainInterface.storyboard */; };
 		4C23DC8C19C9929300A4FE0E /* Rate My Talk.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4C23DC7F19C9929300A4FE0E /* Rate My Talk.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4C23DC9519C99C8F00A4FE0E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C23DC9419C99C8F00A4FE0E /* CloudKit.framework */; };
+		4C23DC9719C9D8D600A4FE0E /* Schedule2014.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4C23DC9619C9D8D600A4FE0E /* Schedule2014.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +76,7 @@
 		4C23DC6B19C98C6A00A4FE0E /* RateMyTalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateMyTalkTests.swift; sourceTree = "<group>"; };
 		4C23DC7519C98DB200A4FE0E /* RateTalkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateTalkVC.swift; sourceTree = "<group>"; };
 		4C23DC7719C98E5700A4FE0E /* TalkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkManager.swift; sourceTree = "<group>"; };
-		4C23DC7919C98FE000A4FE0E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4C23DC7919C98FE000A4FE0E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4C23DC7F19C9929300A4FE0E /* Rate My Talk.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Rate My Talk.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C23DC8119C9929300A4FE0E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		4C23DC8519C9929300A4FE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +84,8 @@
 		4C23DC8819C9929300A4FE0E /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		4C23DC9319C99C8200A4FE0E /* RateMyTalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RateMyTalk.entitlements; sourceTree = "<group>"; };
 		4C23DC9419C99C8F00A4FE0E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		4C23DC9619C9D8D600A4FE0E /* Schedule2014.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Schedule2014.csv; path = ../Schedule2014.csv; sourceTree = "<group>"; };
+		4C23DC9819C9DF8900A4FE0E /* Schedule2014.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Schedule2014.xlsx; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,9 @@
 		10FEF66319C9CFAA000B4581 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4C23DC7919C98FE000A4FE0E /* README.md */,
+				4C23DC9619C9D8D600A4FE0E /* Schedule2014.csv */,
+				4C23DC9819C9DF8900A4FE0E /* Schedule2014.xlsx */,
 				10FEF66719C9D345000B4581 /* star.png */,
 			);
 			name = Resources;
@@ -123,7 +129,6 @@
 		4C23DC4719C98C6900A4FE0E = {
 			isa = PBXGroup;
 			children = (
-				4C23DC7919C98FE000A4FE0E /* README.md */,
 				4C23DC5219C98C6900A4FE0E /* RateMyTalk */,
 				4C23DC6819C98C6A00A4FE0E /* RateMyTalkTests */,
 				4C23DC8319C9929300A4FE0E /* TodayExtension */,
@@ -322,6 +327,7 @@
 			files = (
 				4C23DC5B19C98C6900A4FE0E /* Main.storyboard in Resources */,
 				4C23DC5D19C98C6900A4FE0E /* Images.xcassets in Resources */,
+				4C23DC9719C9D8D600A4FE0E /* Schedule2014.csv in Resources */,
 				10FEF66819C9D345000B4581 /* star.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +448,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "94ae8df2-8b20-4f04-a1ca-688a0a1df464";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -477,6 +484,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "94ae8df2-8b20-4f04-a1ca-688a0a1df464";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -492,7 +500,6 @@
 				INFOPLIST_FILE = RateMyTalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -506,7 +513,6 @@
 				INFOPLIST_FILE = RateMyTalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
