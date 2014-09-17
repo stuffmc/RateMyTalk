@@ -14,6 +14,7 @@
 		4C23DC6C19C98C6A00A4FE0E /* RateMyTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC6B19C98C6A00A4FE0E /* RateMyTalkTests.swift */; };
 		4C23DC7619C98DB200A4FE0E /* RateTalkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC7519C98DB200A4FE0E /* RateTalkVC.swift */; };
 		4C23DC7819C98E5700A4FE0E /* TalkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC7719C98E5700A4FE0E /* TalkManager.swift */; };
+		4C23DC7A19C98FE000A4FE0E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC7919C98FE000A4FE0E /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4C23DC6B19C98C6A00A4FE0E /* RateMyTalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateMyTalkTests.swift; sourceTree = "<group>"; };
 		4C23DC7519C98DB200A4FE0E /* RateTalkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateTalkVC.swift; sourceTree = "<group>"; };
 		4C23DC7719C98E5700A4FE0E /* TalkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkManager.swift; sourceTree = "<group>"; };
+		4C23DC7919C98FE000A4FE0E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		4C23DC4719C98C6900A4FE0E = {
 			isa = PBXGroup;
 			children = (
+				4C23DC7919C98FE000A4FE0E /* README.md */,
 				4C23DC5219C98C6900A4FE0E /* RateMyTalk */,
 				4C23DC6819C98C6A00A4FE0E /* RateMyTalkTests */,
 				4C23DC5119C98C6900A4FE0E /* Products */,
@@ -216,6 +219,7 @@
 			files = (
 				4C23DC5819C98C6900A4FE0E /* TalkListVC.swift in Sources */,
 				4C23DC7619C98DB200A4FE0E /* RateTalkVC.swift in Sources */,
+				4C23DC7A19C98FE000A4FE0E /* README.md in Sources */,
 				4C23DC5619C98C6900A4FE0E /* AppDelegate.swift in Sources */,
 				4C23DC7819C98E5700A4FE0E /* TalkManager.swift in Sources */,
 			);
