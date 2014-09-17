@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CloudKit
 
 class TalkManager {
     let talks = "Talks"
