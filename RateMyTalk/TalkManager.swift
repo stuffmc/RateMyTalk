@@ -78,6 +78,7 @@ class TalkManager {
     func fetchAllTalks(finishCallback: (Array<Talk>) -> Void) {
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: talks, predicate: predicate)
+        query.sortDescriptors = [NSSortDescriptor(key: "begin", ascending: true)]
         publicDB.performQuery(query, inZoneWithID: nil) { (records, error) -> Void in
             self.allTalks = Array<Talk>()
             for record in records {
