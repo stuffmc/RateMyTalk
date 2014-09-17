@@ -9,8 +9,7 @@ The catch: All in Swift!
 
 (Notes)
 
-• JSON?
-• Find out how to have the Sessions (imported from JSON?) in the Public Cloud Kit DB
+• Sadly no JSON available so we exported an EXCEL we got from @lascorbe to CSV, parsed that, uploaded to PublicDB
 • Get the list of sessions and schedule local notifications with userinfo allowing to show them in Today extension
 • Try that in a simple View Controller
 • Rate the current session (The only part working in the extension) - Is there a way to know you run in the extension?!

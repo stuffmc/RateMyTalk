@@ -81,8 +81,13 @@ class Talk: NSObject {
         }
     }
     
-    func addRating (Int) {
-        
+    func addRating (rating: Int, inDatabase: CKDatabase!) {
+        let talkRecord = CKRecord(recordType: "Ratings")
+        talkRecord.setValue(rating, forKey: "rating")
+        inDatabase.saveRecord(talkRecord, completionHandler: { (savedTalk, error) -> Void in
+            println(savedTalk)
+            println(error)
+        })
     }
     
     func averageRating() -> Double {

@@ -89,4 +89,9 @@ class TalkManager {
             println(error)
         })
     }
+    
+    func addRating (talk: Talk, rating: Int) {
+        // TODO: Send back a feedback that it worked. For now, we trust it!x    
+        talk.addRating(rating, inDatabase: publicDB)
+    }
 }
