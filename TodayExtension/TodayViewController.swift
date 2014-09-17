@@ -25,6 +25,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 self.ratingView.userInteractionEnabled = false
             }
         }
+        
+        TalkManager().fetchAllTalks { (allTalks) -> Void in
+            let aTalks = allTalks
+        }
     }
     
     override func didReceiveMemoryWarning() {

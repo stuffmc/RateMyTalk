@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08055E9D19C9D6FD008A9FE0 /* TalkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08055E9C19C9D6FD008A9FE0 /* TalkCollectionViewCell.swift */; };
+		10BDCA7319C9F31400D1DBCA /* TalkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC7719C98E5700A4FE0E /* TalkManager.swift */; };
 		43F2FD6119C9D93900CB9B8C /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F2FD6019C9D93900CB9B8C /* Talk.swift */; };
 		43F2FD6219C9D93900CB9B8C /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F2FD6019C9D93900CB9B8C /* Talk.swift */; };
 		4C23DC5619C98C6900A4FE0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC5519C98C6900A4FE0E /* AppDelegate.swift */; };
@@ -389,6 +390,7 @@
 				4C23DC8719C9929300A4FE0E /* TodayViewController.swift in Sources */,
 				43F2FD6219C9D93900CB9B8C /* Talk.swift in Sources */,
 				74BA2E1C19C9DC8300158334 /* JBRatingView.m in Sources */,
+				10BDCA7319C9F31400D1DBCA /* TalkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
