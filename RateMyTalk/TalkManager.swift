@@ -17,9 +17,14 @@ class TalkManager {
     var allTalks: Array<Talk>?
     
     init() {
+//        self.registerLister()
         fetchAllTalks { (talks) -> Void in
             if let talk = talks.first {
-                self.addRating(talk, rating: 5)
+                self.averageRating(talk, finishCallback: { (average) -> Void in
+                    println(average)
+                    println()
+                })
+////                self.addRating(talk, rating: 5)
             }
         }
     }
@@ -75,9 +80,20 @@ class TalkManager {
         }
     }
 
+    func deleteAllRatings() {
+        let allRatingsQuery = CKQuery(recordType: "Ratings", predicate: NSPredicate(value: true))
+        publicDB.performQuery(allRatingsQuery, inZoneWithID: nil) { (records, error) -> Void in
+            println(records)
+            for record in records {
+                self.publicDB.deleteRecordWithID((record as CKRecord).recordID, completionHandler: nil)
+            }
+        }
+    }
+
     func fetchAllTalks(finishCallback: (Array<Talk>) -> Void) {
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: talks, predicate: predicate)
+        query.sortDescriptors = [NSSortDescriptor(key: "begin", ascending: true)]
         publicDB.performQuery(query, inZoneWithID: nil) { (records, error) -> Void in
             self.allTalks = Array<Talk>()
             for record in records {
@@ -99,5 +115,25 @@ class TalkManager {
     func addRating (talk: Talk, rating: Int) {
         // TODO: Send back a feedback that it worked. For now, we trust it!x    
         talk.addRating(rating, inDatabase: publicDB)
+    }
+    
+    func averageRating(talk: Talk, finishCallback: (Float) -> Void) {
+        talk.averageRating(inDatabase: publicDB) { (average) -> Void in
+            finishCallback(average)
+        }
+    }
+    
+    func registerLister() {
+        let predicate = NSPredicate(value: true)
+        let subscription = CKSubscription(recordType: "Ratings", predicate: predicate, options:.FiresOnRecordCreation )
+        var notificationInfo = CKNotificationInfo()
+        notificationInfo.alertLocalizationKey = "LOCAL_NOTIFICATION_KEY"
+        notificationInfo.shouldBadge = true
+        
+        subscription.notificationInfo = notificationInfo;
+        
+        self.publicDB.saveSubscription(subscription, completionHandler: { (subscription, error) -> Void in
+            println(error)
+        })
     }
 }

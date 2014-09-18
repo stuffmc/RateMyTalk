@@ -13,18 +13,45 @@ class TalkListVC: UICollectionViewController, UICollectionViewDataSource {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     var talks: NSArray?
+    var refreshControl: UIRefreshControl?
+    var ratings: [Talk: String] = Dictionary<Talk, String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.addTarget(self, action: "startRefresh", forControlEvents:.ValueChanged)
+        self.collectionView?.addSubview(self.refreshControl!)
+        self.collectionView?.alwaysBounceVertical = true
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        self.startRefresh()
+    }
+    
+    func startRefresh() {
+        self.spinner.startAnimating()
+        self.ratings.removeAll(keepCapacity: false)
         TalkManager().fetchAllTalks { (allTalks) -> Void in
-            self.spinner.stopAnimating()
-            self.talks = allTalks
-            self.collectionView?.reloadData()
+            for talk in allTalks {
+                // Way too complicated!!!
+                // Optimization needed
+                TalkManager().averageRating(talk, finishCallback: { (Float) -> Void in
+                    self.ratings[talk] = String(format: "%.2f", Float)
+                    if self.ratings.count == allTalks.count {
+                        self.spinner.stopAnimating()
+                        self.talks = allTalks
+                        self.collectionView?.reloadData()
+                        self.refreshControl?.endRefreshing()
+                    }
+                })
+            }
+//            self.spinner.stopAnimating()
+//            self.talks = allTalks
+//            self.collectionView?.reloadData()
+//            self.refreshControl?.endRefreshing()
         }
+
     }
     
 //    override func collectionView(collectionView: UICollectionView,
@@ -54,14 +81,21 @@ class TalkListVC: UICollectionViewController, UICollectionViewDataSource {
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("TalkCell", forIndexPath: indexPath) as TalkCollectionViewCell
-        var talk:Talk = self.talks?.objectAtIndex(indexPath.row) as Talk
+        var talk = self.talks?.objectAtIndex(indexPath.row) as Talk
+        
+        cell.talk = talk
         
         cell.lblSpeaker?.text = talk.speaker
         cell.lblTopic?.text = talk.name
         
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "h:mm a" // superset of OP's format
-        cell.lblTime?.text = dateFormatter.stringFromDate(talk.begin)
+        cell.lblTime?.text = talk.beginString
+
+        if let rating = self.ratings[talk] {
+            // Switch to swift strings instead of NSString!
+            var string = NSString(string: rating)
+            cell.ratingView.updateRatingTo(CGFloat(string.floatValue))
+        }
+        
         return cell
     }
 }

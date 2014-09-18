@@ -41,9 +41,9 @@ class Talk: NSObject {
         }
     }
     
-    var beginString: NSDate {
+    var beginString: String {
         get {
-            return self.record.objectForKey(self.beginStringKey) as NSDate
+            return self.record.objectForKey(self.beginStringKey) as String
         }
         
         set {
@@ -61,9 +61,9 @@ class Talk: NSObject {
         }
     }
 
-    var endString: NSDate {
+    var endString: String {
         get {
-            return self.record.objectForKey(self.endStringKey) as NSDate
+            return self.record.objectForKey(self.endStringKey) as String
         }
         
         set {
@@ -92,8 +92,21 @@ class Talk: NSObject {
         })
     }
     
-    func averageRating() -> Double {
-        return 0
+    func averageRating(inDatabase database: CKDatabase!, finishCallback: (Float) -> Void) {
+        let predicate = NSPredicate(format: "talk = %@", self.record.recordID)
+        let query = CKQuery(recordType: "Ratings", predicate: predicate)
+        database.performQuery(query, inZoneWithID: nil) { (records, error) -> Void in
+            var sum: Float = 0
+            if records.count > 0 {
+                for record in records {
+                    sum += record.objectForKey("rating") as Float
+                }
+                sum = sum/Float(records.count)
+            }
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                finishCallback(sum)
+            })
+        }
     }
 
     // Create from an existing CKRecord
