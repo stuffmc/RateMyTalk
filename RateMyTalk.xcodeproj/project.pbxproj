@@ -15,7 +15,6 @@
 		4C23DC5819C98C6900A4FE0E /* TalkListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC5719C98C6900A4FE0E /* TalkListVC.swift */; };
 		4C23DC5B19C98C6900A4FE0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C23DC5919C98C6900A4FE0E /* Main.storyboard */; };
 		4C23DC5D19C98C6900A4FE0E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C23DC5C19C98C6900A4FE0E /* Images.xcassets */; };
-		4C23DC6C19C98C6A00A4FE0E /* RateMyTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC6B19C98C6A00A4FE0E /* RateMyTalkTests.swift */; };
 		4C23DC7619C98DB200A4FE0E /* RateTalkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC7519C98DB200A4FE0E /* RateTalkVC.swift */; };
 		4C23DC7819C98E5700A4FE0E /* TalkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC7719C98E5700A4FE0E /* TalkManager.swift */; };
 		4C23DC7A19C98FE000A4FE0E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4C23DC7919C98FE000A4FE0E /* README.md */; };
@@ -30,13 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4C23DC6619C98C6A00A4FE0E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4C23DC4819C98C6900A4FE0E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4C23DC4F19C98C6900A4FE0E;
-			remoteInfo = RateMyTalk;
-		};
 		4C23DC8A19C9929300A4FE0E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4C23DC4819C98C6900A4FE0E /* Project object */;
@@ -70,13 +62,12 @@
 /* Begin PBXFileReference section */
 		08055E9C19C9D6FD008A9FE0 /* TalkCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkCollectionViewCell.swift; sourceTree = "<group>"; };
 		43F2FD6019C9D93900CB9B8C /* Talk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
-		4C23DC5019C98C6900A4FE0E /* RateMyTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RateMyTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C23DC5019C98C6900A4FE0E /* Rate My Talk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rate My Talk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C23DC5419C98C6900A4FE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C23DC5519C98C6900A4FE0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C23DC5719C98C6900A4FE0E /* TalkListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkListVC.swift; sourceTree = "<group>"; };
 		4C23DC5A19C98C6900A4FE0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C23DC5C19C98C6900A4FE0E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4C23DC6519C98C6900A4FE0E /* RateMyTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RateMyTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C23DC6A19C98C6A00A4FE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C23DC6B19C98C6A00A4FE0E /* RateMyTalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateMyTalkTests.swift; sourceTree = "<group>"; };
 		4C23DC7519C98DB200A4FE0E /* RateTalkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateTalkVC.swift; sourceTree = "<group>"; };
@@ -106,13 +97,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C23DC6219C98C6900A4FE0E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4C23DC7C19C9929300A4FE0E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,8 +123,7 @@
 		4C23DC5119C98C6900A4FE0E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C23DC5019C98C6900A4FE0E /* RateMyTalk.app */,
-				4C23DC6519C98C6900A4FE0E /* RateMyTalkTests.xctest */,
+				4C23DC5019C98C6900A4FE0E /* Rate My Talk.app */,
 				4C23DC7F19C9929300A4FE0E /* Rate My Talk.appex */,
 			);
 			name = Products;
@@ -248,26 +231,8 @@
 			);
 			name = RateMyTalk;
 			productName = RateMyTalk;
-			productReference = 4C23DC5019C98C6900A4FE0E /* RateMyTalk.app */;
+			productReference = 4C23DC5019C98C6900A4FE0E /* Rate My Talk.app */;
 			productType = "com.apple.product-type.application";
-		};
-		4C23DC6419C98C6900A4FE0E /* RateMyTalkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4C23DC7219C98C6A00A4FE0E /* Build configuration list for PBXNativeTarget "RateMyTalkTests" */;
-			buildPhases = (
-				4C23DC6119C98C6900A4FE0E /* Sources */,
-				4C23DC6219C98C6900A4FE0E /* Frameworks */,
-				4C23DC6319C98C6900A4FE0E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4C23DC6719C98C6A00A4FE0E /* PBXTargetDependency */,
-			);
-			name = RateMyTalkTests;
-			productName = RateMyTalkTests;
-			productReference = 4C23DC6519C98C6900A4FE0E /* RateMyTalkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		4C23DC7E19C9929300A4FE0E /* TodayExtension */ = {
 			isa = PBXNativeTarget;
@@ -327,7 +292,6 @@
 			projectRoot = "";
 			targets = (
 				4C23DC4F19C98C6900A4FE0E /* RateMyTalk */,
-				4C23DC6419C98C6900A4FE0E /* RateMyTalkTests */,
 				4C23DC7E19C9929300A4FE0E /* TodayExtension */,
 			);
 		};
@@ -341,13 +305,6 @@
 				4C23DC5B19C98C6900A4FE0E /* Main.storyboard in Resources */,
 				4C23DC5D19C98C6900A4FE0E /* Images.xcassets in Resources */,
 				4C23DC9A19C9EFD900A4FE0E /* Schedule2014.csv in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4C23DC6319C98C6900A4FE0E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,14 +334,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C23DC6119C98C6900A4FE0E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C23DC6C19C98C6A00A4FE0E /* RateMyTalkTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4C23DC7B19C9929300A4FE0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,11 +348,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4C23DC6719C98C6A00A4FE0E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4C23DC4F19C98C6900A4FE0E /* RateMyTalk */;
-			targetProxy = 4C23DC6619C98C6A00A4FE0E /* PBXContainerItemProxy */;
-		};
 		4C23DC8B19C9929300A4FE0E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4C23DC7E19C9929300A4FE0E /* TodayExtension */;
@@ -466,6 +410,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = "Rate My Talk";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -502,6 +447,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = "Rate My Talk";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -534,43 +480,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RateMyTalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RateMyTalk/RateMyTalk-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		4C23DC7319C98C6A00A4FE0E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RateMyTalkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RateMyTalk.app/RateMyTalk";
-			};
-			name = Debug;
-		};
-		4C23DC7419C98C6A00A4FE0E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RateMyTalkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RateMyTalk.app/RateMyTalk";
 			};
 			name = Release;
 		};
@@ -578,13 +488,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = TodayExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "Rate My Talk";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "RateMyTalk/TodayExtension-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -595,9 +506,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TodayExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "Rate My Talk";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "RateMyTalk/TodayExtension-Bridging-Header.h";
 			};
@@ -620,15 +532,6 @@
 			buildConfigurations = (
 				4C23DC7019C98C6A00A4FE0E /* Debug */,
 				4C23DC7119C98C6A00A4FE0E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4C23DC7219C98C6A00A4FE0E /* Build configuration list for PBXNativeTarget "RateMyTalkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4C23DC7319C98C6A00A4FE0E /* Debug */,
-				4C23DC7419C98C6A00A4FE0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
