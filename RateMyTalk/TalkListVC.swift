@@ -14,6 +14,7 @@ class TalkListVC: UICollectionViewController, UICollectionViewDataSource {
     
     var talks: NSArray?
     var refreshControl: UIRefreshControl?
+    var ratings: [Talk: String] = Dictionary<Talk, String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +31,25 @@ class TalkListVC: UICollectionViewController, UICollectionViewDataSource {
     
     func startRefresh() {
         self.spinner.startAnimating()
+        self.ratings.removeAll(keepCapacity: false)
         TalkManager().fetchAllTalks { (allTalks) -> Void in
-            self.spinner.stopAnimating()
-            self.talks = allTalks
-            self.collectionView?.reloadData()
-            self.refreshControl?.endRefreshing()
+            for talk in allTalks {
+                // Way too complicated!!!
+                // Optimization needed
+                TalkManager().averageRating(talk, finishCallback: { (Float) -> Void in
+                    self.ratings[talk] = String(format: "%.2f", Float)
+                    if self.ratings.count == allTalks.count {
+                        self.spinner.stopAnimating()
+                        self.talks = allTalks
+                        self.collectionView?.reloadData()
+                        self.refreshControl?.endRefreshing()
+                    }
+                })
+            }
+//            self.spinner.stopAnimating()
+//            self.talks = allTalks
+//            self.collectionView?.reloadData()
+//            self.refreshControl?.endRefreshing()
         }
 
     }
@@ -71,9 +86,16 @@ class TalkListVC: UICollectionViewController, UICollectionViewDataSource {
         cell.lblSpeaker?.text = talk.speaker
         cell.lblTopic?.text = talk.name
         
+        // Switch to swift formater!
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "h:mm a" // superset of OP's format
+        dateFormatter.dateFormat = "h:mm a"
         cell.lblTime?.text = dateFormatter.stringFromDate(talk.begin)
+
+        if let rating = self.ratings[talk] {
+            // Switch to swift strings instead of NSString!
+            var string = NSString(string: rating)
+            cell.ratingView.updateRatingTo(CGFloat(string.floatValue))
+        }
         
         return cell
     }

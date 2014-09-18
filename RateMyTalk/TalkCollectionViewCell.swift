@@ -26,5 +26,6 @@ class TalkCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.ratingView.userInteractionEnabled = false
     }
 }
