@@ -17,7 +17,7 @@ class TalkManager {
     var allTalks: Array<Talk>?
     
     init() {
-        self.registerLister()
+//        self.registerLister()
         fetchAllTalks { (talks) -> Void in
             if let talk = talks.first {
                 self.averageRating(talk, finishCallback: { (average) -> Void in

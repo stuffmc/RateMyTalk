@@ -83,6 +83,8 @@ class TalkListVC: UICollectionViewController, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("TalkCell", forIndexPath: indexPath) as TalkCollectionViewCell
         var talk = self.talks?.objectAtIndex(indexPath.row) as Talk
         
+        cell.talk = talk
+        
         cell.lblSpeaker?.text = talk.speaker
         cell.lblTopic?.text = talk.name
         

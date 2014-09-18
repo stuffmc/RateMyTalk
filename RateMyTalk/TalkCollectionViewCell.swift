@@ -15,6 +15,8 @@ class TalkCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblSpeaker: UILabel!
     @IBOutlet weak var ratingView: JBRatingView!
     
+    weak var talk:Talk?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -26,6 +28,11 @@ class TalkCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.ratingView.userInteractionEnabled = false
+        self.ratingView.userInteractionEnabled = true
+        self.ratingView.ratingChangObserverBlock { (newRating) -> Void in
+            if (self.talk != nil) {
+                TalkManager().addRating(self.talk!, rating: Int(newRating))
+            }
+        }
     }
 }
