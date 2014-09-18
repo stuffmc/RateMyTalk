@@ -30,7 +30,7 @@ class TalkCollectionViewCell: UICollectionViewCell {
         // Initialization code
         self.ratingView.userInteractionEnabled = true
         self.ratingView.ratingChangObserverBlock { (newRating) -> Void in
-            if (self.talk != nil) {
+            if (self.talk != nil && newRating > 0) {
                 TalkManager().addRating(self.talk!, rating: Int(newRating))
             }
         }

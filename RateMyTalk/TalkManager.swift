@@ -80,6 +80,16 @@ class TalkManager {
         }
     }
 
+    func deleteAllRatings() {
+        let allRatingsQuery = CKQuery(recordType: "Ratings", predicate: NSPredicate(value: true))
+        publicDB.performQuery(allRatingsQuery, inZoneWithID: nil) { (records, error) -> Void in
+            println(records)
+            for record in records {
+                self.publicDB.deleteRecordWithID((record as CKRecord).recordID, completionHandler: nil)
+            }
+        }
+    }
+
     func fetchAllTalks(finishCallback: (Array<Talk>) -> Void) {
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: talks, predicate: predicate)
