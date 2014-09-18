@@ -81,15 +81,12 @@ class TalkListVC: UICollectionViewController, UICollectionViewDataSource {
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("TalkCell", forIndexPath: indexPath) as TalkCollectionViewCell
-        var talk:Talk = self.talks?.objectAtIndex(indexPath.row) as Talk
+        var talk = self.talks?.objectAtIndex(indexPath.row) as Talk
         
         cell.lblSpeaker?.text = talk.speaker
         cell.lblTopic?.text = talk.name
         
-        // Switch to swift formater!
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "h:mm a"
-        cell.lblTime?.text = dateFormatter.stringFromDate(talk.begin)
+        cell.lblTime?.text = talk.beginString
 
         if let rating = self.ratings[talk] {
             // Switch to swift strings instead of NSString!

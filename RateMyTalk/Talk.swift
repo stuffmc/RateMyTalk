@@ -41,9 +41,9 @@ class Talk: NSObject {
         }
     }
     
-    var beginString: NSDate {
+    var beginString: String {
         get {
-            return self.record.objectForKey(self.beginStringKey) as NSDate
+            return self.record.objectForKey(self.beginStringKey) as String
         }
         
         set {
@@ -61,9 +61,9 @@ class Talk: NSObject {
         }
     }
 
-    var endString: NSDate {
+    var endString: String {
         get {
-            return self.record.objectForKey(self.endStringKey) as NSDate
+            return self.record.objectForKey(self.endStringKey) as String
         }
         
         set {
